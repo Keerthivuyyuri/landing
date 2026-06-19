@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="mx-auto min-h-screen bg-white max-w-[390px] md:max-w-[768px] lg:max-w-[1200px]">
+    <div className="min-h-screen w-full bg-white overflow-x-hidden">
       <Header />
       <Hero />
       <ProgramCards />

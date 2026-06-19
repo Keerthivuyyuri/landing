@@ -15,31 +15,38 @@ const programs = [
 
 function ProgramCards() {
   return (
-    <section
-      id="catalog"
-      className="grid gap-5 px-5 py-6 md:gap-6 md:px-8 lg:grid-cols-2 lg:px-20 lg:py-14"
-    >
-      {programs.map((item, index) => (
-        <div key={index} className="bg-[#f2f2f2] p-5 md:p-8">
-          <div className="flex items-center gap-4">
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#68b738] text-4xl md:h-24 md:w-24">
-              {item.icon}
+    <section id="catalog" className="bg-white">
+      <div className="mx-auto max-w-[1200px] px-5 py-6 md:px-8 md:py-8 lg:px-[60px] lg:py-[82px]">
+        <div className="grid gap-5 lg:grid-cols-2 lg:gap-[80px]">
+          {programs.map((item, index) => (
+            <div
+              key={index}
+              className="bg-[#f2f2f2] px-5 py-8 md:px-[52px] md:py-[50px]"
+            >
+              {/* Top */}
+              <div className="flex items-center gap-5">
+                <div className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#68b738] text-[28px] md:h-[100px] md:w-[100px] md:text-[48px]">
+                  {item.icon}
+                </div>
+
+                <h3 className="text-[24px] font-normal uppercase md:text-[36px]">
+                  {item.title}
+                </h3>
+              </div>
+
+              {/* Text */}
+              <p className="mt-8 border-b border-[#d9d9d9] pb-6 text-[14px] leading-6 text-[#444] md:border-none md:text-[16px]">
+                {item.text}
+              </p>
+
+              {/* Link */}
+              <button className="mt-6 text-[16px] font-bold uppercase">
+                {item.link} →
+              </button>
             </div>
-
-            <h3 className="text-[22px] uppercase md:text-[28px]">
-              {item.title}
-            </h3>
-          </div>
-
-          <p className="mt-5 border-b border-gray-300 pb-5 text-[12px] leading-5 text-gray-700 md:border-none md:text-[14px]">
-            {item.text}
-          </p>
-
-          <p className="mt-4 text-[13px] uppercase md:text-[15px]">
-            {item.link} →
-          </p>
+          ))}
         </div>
-      ))}
+      </div>
     </section>
   );
 }

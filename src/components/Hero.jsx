@@ -1,11 +1,11 @@
 import product from "../assets/product.png";
 
 const catBg =
-  "https://images.unsplash.com/photo-1574158622682-e40e69881006?w=1200";
+  "https://images.unsplash.com/photo-1574158622682-e40e69881006?w=1200&q=80";
 
 function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden bg-white">
+    <section id="home" className="relative w-full overflow-hidden bg-white">
       {/* Mobile */}
       <div className="relative bg-[#68b738] px-5 pt-[95px] pb-[135px] text-center md:hidden">
         <img
@@ -30,7 +30,7 @@ function Hero() {
         <img
           src={product}
           alt="Cat Energy"
-          className="w-[260px] rotate-[14deg] drop-shadow-2xl"
+          className="w-[260px] rotate-[14deg] object-contain drop-shadow-2xl"
         />
       </div>
 
@@ -41,59 +41,61 @@ function Hero() {
       </div>
 
       {/* Tablet */}
-      <div className="hidden bg-white px-8 pt-[150px] md:block lg:hidden">
-        <div className="pl-[70px]">
-          <h2 className="text-[48px] font-bold leading-[55px] text-black">
+      <div className="relative hidden min-h-[900px] bg-white px-8 pt-[135px] md:block lg:hidden">
+        <div className="mx-auto max-w-[708px] pl-[40px]">
+          <h2 className="text-[54px] font-bold leading-[58px] text-black">
             Функциональное <br />
             питание для котов
           </h2>
 
-          <p className="mt-7 text-[16px] font-bold uppercase">
+          <p className="mt-[32px] text-[16px] font-bold uppercase text-black">
             Занялся собой? Займись котом!
           </p>
 
-          <button className="mt-7 bg-[#68b738] px-8 py-4 text-[14px] font-bold uppercase text-white">
+          <button className="relative z-20 mt-[30px] bg-[#68b738] px-[28px] py-[14px] text-[15px] font-bold uppercase text-white">
             Подобрать программу
           </button>
         </div>
 
-        <div className="relative -mt-[70px] flex justify-center pb-10">
-          <img
-            src={product}
-            alt="Cat Energy"
-            className="w-[560px] rotate-[14deg] drop-shadow-2xl"
-          />
-        </div>
+        <img
+          src={product}
+          alt="Cat Energy"
+          className="absolute left-1/2 top-[300px] z-10 w-[620px] -translate-x-1/2 object-contain drop-shadow-2xl"
+        />
       </div>
 
       {/* Desktop */}
-      <div className="hidden min-h-[520px] lg:grid lg:grid-cols-2">
-        <div className="pl-[110px] pt-[180px]">
-          <h2 className="text-[44px] font-bold leading-[52px]">
-            Функциональное <br />
-            питание для котов
-          </h2>
+      <div className="relative hidden h-[540px] lg:flex">
+        <div className="w-1/2 bg-white pt-[170px]">
+          <div className="ml-auto w-[600px] pl-[90px]">
+            <h2 className="text-[40px] font-bold leading-[48px] text-black">
+              Функциональное <br />
+              питание для котов
+            </h2>
 
-          <p className="mt-7 text-[14px] font-bold uppercase">
-            Занялся собой? Займись котом!
-          </p>
+            <p className="mt-6 text-[14px] font-bold uppercase">
+              Занялся собой? Займись котом!
+            </p>
 
-          <button className="mt-8 bg-[#68b738] px-8 py-3 text-[14px] font-bold uppercase text-white">
-            Подобрать программу
-          </button>
+            <button className="mt-8 bg-[#68b738] px-8 py-3 text-[14px] font-bold uppercase text-white">
+              Подобрать программу
+            </button>
+          </div>
         </div>
 
-        <div className="relative bg-[#68b738]">
+        <div className="relative w-1/2 overflow-hidden bg-[#68b738]">
           <img
             src={catBg}
             alt=""
             className="h-full w-full object-cover opacity-20"
           />
+        </div>
 
+        <div className="absolute left-1/2 top-[90px] z-20 -translate-x-[35%]">
           <img
             src={product}
             alt="Cat Energy"
-            className="absolute left-[-80px] top-[90px] w-[340px] rotate-[14deg] drop-shadow-2xl"
+            className="h-[450px] w-[500px] object-contain drop-shadow-2xl"
           />
         </div>
       </div>

@@ -7,31 +7,35 @@ function MapSection() {
 
   return (
     <section className="bg-white">
-      {/* Address block - mobile/tablet */}
-      <div className="grid grid-cols-2 gap-5 px-5 py-7 md:px-[70px] md:py-14 lg:hidden">
-        <h3 className="text-[16px] font-bold uppercase leading-[21px] md:text-[20px] md:leading-[28px]">
-          Приглашаем <br />
-          к сотрудничеству <br />
-          дилеров!
-        </h3>
+      {/* Mobile + Tablet Address */}
+      <div className="lg:hidden">
+        <div className="mx-auto max-w-[1200px] grid grid-cols-2 gap-6 px-5 py-7 md:px-8 md:py-14">
+          <h3 className="text-[16px] font-bold uppercase leading-[22px] md:text-[20px] md:leading-[28px]">
+            Приглашаем <br />
+            к сотрудничеству <br />
+            дилеров!
+          </h3>
 
-        <p className="text-[14px] leading-[22px] text-[#444] md:text-[16px] md:leading-[26px]">
-          ул. Большая <br />
-          Конюшенная, д. 19/8
-          <br />
-          <br />
-          Санкт-Петербург
-        </p>
+          <p className="text-[14px] leading-[22px] text-[#444] md:text-[16px] md:leading-[26px]">
+            ул. Большая <br />
+            Конюшенная, д. 19/8
+            <br />
+            <br />
+            Санкт-Петербург
+          </p>
+        </div>
       </div>
 
       {/* Map */}
       <div
-        className="relative h-[360px] bg-cover bg-center md:h-[400px] lg:h-[400px]"
-        style={{ backgroundImage: `url(${mapUrl})` }}
+        className="relative h-[360px] bg-cover bg-center md:h-[400px]"
+        style={{
+          backgroundImage: `url(${mapUrl})`,
+        }}
       >
-        {/* Desktop address card */}
-        <div className="absolute left-[110px] top-[95px] hidden w-[570px] bg-white px-[75px] py-[60px] lg:block">
-          <div className="grid grid-cols-2 gap-10">
+        {/* Desktop Address Card */}
+        <div className="absolute left-[60px] top-[95px] hidden bg-white px-[70px] py-[55px] lg:block">
+          <div className="grid w-[520px] grid-cols-2 gap-10">
             <h3 className="text-[20px] font-bold uppercase leading-[28px]">
               Приглашаем <br />
               к сотрудничеству <br />
@@ -49,8 +53,8 @@ function MapSection() {
         </div>
 
         {/* Marker */}
-        <div className="absolute left-1/2 top-[120px] -translate-x-1/2 md:top-[150px] lg:left-[920px] lg:top-[145px] lg:translate-x-0">
-          <div className="flex h-[60px] w-[60px] items-center justify-center rounded-full bg-white shadow-md md:h-[72px] md:w-[72px]">
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:left-[900px] lg:top-[180px] lg:translate-x-0 lg:translate-y-0">
+          <div className="flex h-[60px] w-[60px] items-center justify-center rounded-full bg-white shadow-lg md:h-[72px] md:w-[72px]">
             <img
               src={markerUrl}
               alt="cat marker"

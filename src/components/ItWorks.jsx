@@ -5,36 +5,39 @@ const steps = [
   "Уже через месяц наслаждайтесь изменениями у вашего питомца.",
 ];
 
+const icons = ["🌿", "🥣", "🍴", "⏱"];
+
 function ItWorks() {
   return (
-    <section id="program" className="px-5 py-4 md:px-8 lg:px-20">
-      <h2 className="text-[28px] md:text-[38px]">Как это работает</h2>
+    <section id="program" className="bg-white">
+      <div className="mx-auto max-w-[1200px] px-5 py-8 md:px-8 md:py-12 lg:px-[60px] lg:py-[70px]">
+        <h2 className="text-[36px] font-normal md:text-[50px]">
+          Как это работает
+        </h2>
 
-      <div className="mt-6 space-y-5 md:grid md:grid-cols-2 md:gap-8 md:space-y-0 lg:grid-cols-4">
-        {steps.map((step, index) => (
-          <div
-            key={index}
-            className="relative flex items-center gap-5 md:block md:min-h-[170px]"
-          >
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center bg-[#68b738] text-white">
-              {index === 0
-                ? "🌿"
-                : index === 1
-                ? "🥣"
-                : index === 2
-                ? "🍴"
-                : "⏱"}
+        <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-[80px]">
+          {steps.map((step, index) => (
+            <div
+              key={index}
+              className="relative flex items-center gap-5 md:block md:min-h-[280px]"
+            >
+              {/* Icon */}
+              <div className="relative z-10 flex h-[60px] w-[60px] shrink-0 items-center justify-center bg-[#68b738] text-[28px] text-white md:h-[80px] md:w-[80px] md:text-[36px]">
+                {icons[index]}
+              </div>
+
+              {/* Number */}
+              <span className="absolute right-0 top-[-40px] hidden text-[240px] font-normal leading-none text-[#f2f2f2] md:block">
+                {index + 1}
+              </span>
+
+              {/* Text */}
+              <p className="relative z-10 text-[14px] leading-6 text-[#444] md:mt-8 md:text-[16px]">
+                {step}
+              </p>
             </div>
-
-            <p className="relative z-10 text-[12px] leading-5 text-gray-600 md:mt-5">
-              {step}
-            </p>
-
-            <span className="absolute right-0 top-0 hidden text-[110px] leading-none text-gray-100 md:block">
-              {index + 1}
-            </span>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
