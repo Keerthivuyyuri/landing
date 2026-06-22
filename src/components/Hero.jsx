@@ -64,11 +64,12 @@ function Hero() {
         />
       </div>
 
-      {/* Desktop */}
-      <div className="relative hidden h-[540px] lg:flex">
-        <div className="w-1/2 bg-white pt-[170px]">
-          <div className="ml-auto w-[600px] pl-[90px]">
-            <h2 className="text-[40px] font-bold leading-[48px] text-black">
+      {/* Desktop + Nest Hub */}
+      <div className="relative hidden h-[540px] lg:flex min-[1024px]:max-[1199px]:h-[500px]">
+        {/* Left side */}
+        <div className="w-1/2 bg-white pt-[170px] min-[1024px]:max-[1199px]:pt-[130px]">
+          <div className="ml-auto w-[600px] pl-[90px] min-[1024px]:max-[1199px]:w-[500px] min-[1024px]:max-[1199px]:pl-[40px]">
+            <h2 className="text-[40px] font-bold leading-[48px] text-black min-[1024px]:max-[1199px]:text-[34px]">
               Функциональное <br />
               питание для котов
             </h2>
@@ -83,6 +84,7 @@ function Hero() {
           </div>
         </div>
 
+        {/* Right side */}
         <div className="relative w-1/2 overflow-hidden bg-[#68b738]">
           <img
             src={catBg}
@@ -91,11 +93,29 @@ function Hero() {
           />
         </div>
 
-        <div className="absolute left-1/2 top-[90px] z-20 -translate-x-[35%]">
+        {/* Product Image */}
+        <div
+          className="
+            absolute
+            left-1/2
+            top-[90px]
+            z-20
+            -translate-x-[35%]
+            min-[1024px]:max-[1199px]:top-[120px]
+            min-[1024px]:max-[1199px]:-translate-x-[40%]
+          "
+        >
           <img
             src={product}
             alt="Cat Energy"
-            className="h-[450px] w-[500px] object-contain drop-shadow-2xl"
+            className="
+              h-[450px]
+              w-[500px]
+              object-contain
+              drop-shadow-2xl
+              min-[1024px]:max-[1199px]:h-[380px]
+              min-[1024px]:max-[1199px]:w-[430px]
+            "
           />
         </div>
       </div>

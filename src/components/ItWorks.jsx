@@ -9,8 +9,8 @@ const icons = ["🌿", "🥣", "🍴", "⏱"];
 
 function ItWorks() {
   return (
-    <section id="program" className="bg-white">
-      <div className="mx-auto max-w-[1200px] px-5 py-8 md:px-8 md:py-12 lg:px-[60px] lg:py-[70px]">
+    <section id="program" className="bg-white lg:-mt-[40px]">
+      <div className="mx-auto max-w-[1220px] px-5 pt-4 pb-8 md:px-8 md:pt-6 md:pb-10 lg:px-0 lg:pt-[20px] lg:pb-[10px]">
         <h2 className="text-[36px] font-normal md:text-[50px]">
           Как это работает
         </h2>
