@@ -1,18 +1,16 @@
 import product from "../assets/product.png";
-
-const catBg =
-  "https://images.unsplash.com/photo-1574158622682-e40e69881006?w=1200&q=80";
+import background from "../assets/background.png";
 
 function Hero() {
   return (
     <section id="home" className="relative w-full overflow-hidden bg-white">
       {/* Mobile */}
-      <div className="relative bg-[#68b738] px-5 pt-[95px] pb-[135px] text-center md:hidden">
-        <img
-          src={catBg}
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover opacity-15"
-        />
+      <div className="relative px-5 pt-[95px] pb-[135px] text-center md:hidden">
+  <img
+    src={background}
+    alt=""
+    className="absolute inset-0 h-full w-full object-cover"
+  />
 
         <div className="relative z-10">
           <h2 className="text-[32px] font-bold leading-[36px] text-white">
@@ -85,12 +83,8 @@ function Hero() {
         </div>
 
         {/* Right side */}
-        <div className="relative w-1/2 overflow-hidden bg-[#68b738]">
-          <img
-            src={catBg}
-            alt=""
-            className="h-full w-full object-cover opacity-20"
-          />
+        <div className="relative w-1/2 overflow-hidden">
+          <img src={background} alt="" className="h-full w-full object-cover" />
         </div>
 
         {/* Product Image */}
